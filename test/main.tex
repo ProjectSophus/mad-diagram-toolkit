@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+
+\begin{document}
+
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+    \node[rectangle,draw](col3row0) at (9.0, 0.0) {$\times$};
+    \node[rectangle,draw](col2row0) at (6.0, -1.0) {$\times$};
+    \node[rectangle,draw](col1row0) at (3.0, -1.0) {fact};
+    \node[](col0row0) at (0.0, 0.0) {7};
+    \node[](col1row1) at (3.0, 1.0) {6};
+    \node[](col2row1) at (6.0, 1.0) {3};
+    \node[](col4row0) at (12.0, 0.0) {16};
+
+    \draw[->] (col0row0) -- (col1row0);
+    \draw[->] (col1row0) -- (col2row0);
+    \draw[->] (col1row1) -- (col2row0);
+    \draw[->] (col2row0) -- (col3row0);
+    \draw[->] (col2row1) -- (col3row0);
+    \draw[->] (col3row0) -- (col4row0);
+  \end{tikzpicture}
+\end{figure}
+
+
+
+
+
+
+
+\end{document}
